@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="projectnom - tasarım ve dijital projeler">
+  <title>projectnom</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap");
+
+    @font-face {
+      font-family: "Tafakur";
+      src: url("fonts/Tafakur.ttf") format("truetype");
+      font-display: swap;
+    }
+
+    :root {
+      --paper: #fff8f1;
+      --ink: #262044;
+      --soft-ink: #706985;
+      --line: #ded4e8;
+      --link: #e53d83;
+      --yellow: #ffe66d;
+      --blue: #65d9df;
+      --max-width: 930px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background-color: var(--paper);
+      background-image: radial-gradient(#eaddec 1px, transparent 1px);
+      background-size: 18px 18px;
+      color: var(--ink);
+      font: 16px/1.65 Arial, Helvetica, sans-serif;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover { color: #8b2860; }
+
+    .page {
+      width: min(var(--max-width), calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    header {
+      position: relative;
+      padding: 34px 0 24px;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .name {
+      color: var(--ink);
+      font: 56px/0.8 "Tafakur", "Comic Sans MS", cursive;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      transform: rotate(-3deg);
+    }
+
+    .brand-art {
+      display: block;
+      width: min(100%, 820px);
+      margin: 24px auto 0;
+    }
+
+    .brand-art img {
+      display: block;
+      width: min(100%, 820px);
+      height: auto;
+      margin-top: 24px;
+      margin-right: auto;
+      margin-left: auto;
+      border: 2px solid var(--ink);
+      box-shadow: 7px 7px 0 var(--ink);
+    }
+
+    .brand-art h2 {
+      margin: 28px 0 0;
+      color: #8b2860;
+      font: 400 clamp(30px, 5vw, 52px)/1 "This Is Electronik", "Arial Black", Impact, sans-serif;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .brand-art p {
+      max-width: 600px;
+      margin: 16px 0 0;
+      color: var(--soft-ink);
+      font: 400 15px/1.75 "Manrope", Arial, sans-serif;
+    }
+
+    nav {
+      position: absolute;
+      top: 34px;
+      right: 0;
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      padding: 4px 10px;
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      background: var(--yellow);
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .intro {
+      max-width: 730px;
+      padding: 105px 0 118px;
+    }
+
+    .intro h1 {
+      max-width: 690px;
+      margin: 0;
+      font: 400 clamp(38px, 6vw, 68px)/1.08 Georgia, "Times New Roman", serif;
+      letter-spacing: -0.055em;
+      text-wrap: balance;
+    }
+
+    .intro p {
+      max-width: 570px;
+      margin: 28px 0 0;
+      color: var(--soft-ink);
+      font-size: 18px;
+      background: var(--blue);
+      box-shadow: 7px 7px 0 var(--ink);
+      padding: 10px 14px;
+      transform: rotate(1deg);
+    }
+
+    .section {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 50px;
+      padding: 36px 0 76px;
+      border-top: 2px solid var(--line);
+    }
+
+    .section-label {
+      margin: 5px 0 0;
+      color: var(--soft-ink);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .section h2 {
+      margin: 0 0 20px;
+      font: 400 28px/1.2 Georgia, "Times New Roman", serif;
+      letter-spacing: -0.04em;
+      color: #8b2860;
+    }
+
+    .section p { max-width: 620px; margin: 0 0 18px; }
+
+    .project-list { margin: 0; padding: 0; list-style: none; }
+
+    .project-list li {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      padding: 16px 0;
+      border-top: 1px dashed var(--line);
+    }
+
+    .project-list li:first-child { padding-top: 0; border-top: 0; }
+    .project-list a { font-size: 17px; }
+    .project-list span { color: var(--soft-ink); font-size: 14px; }
+
+    .contact {
+      margin-top: 5px;
+      font-size: 18px;
+      display: inline-block;
+      padding: 4px 12px;
+      background: var(--yellow);
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+    }
+
+    footer {
+      padding: 24px 0 40px;
+      color: var(--soft-ink);
+      font-size: 13px;
+      border-top: 2px solid var(--ink);
+    }
+
+    @media (max-width: 650px) {
+      .page { width: min(var(--max-width), calc(100% - 32px)); }
+      nav { position: static; margin-top: 16px; }
+      .name { font-size: 48px; }
+      .intro { padding: 76px 0 84px; }
+      .section { display: block; padding: 28px 0 58px; }
+      .section-label { margin-bottom: 18px; }
+      .project-list li { display: block; }
+      .project-list span { display: block; margin-top: 3px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div>
+        <a class="name" href="#top">projectnom</a>
+        <div class="brand-art">
+          <img src="https://i.imgur.com/UyZVfbU.png" alt="Project N.O.M. görseli">
+          <p>Project N.O.M. is an independent creative studio founded by two siblings, Yusuf and Şeyma Aydın. We started building the studio from scratch in our apartment garage, using our own resources, experimenting with animation, creative coding and digital art.</p>
+          <p>Working independently, we develop our own tools, techniques and visual approaches, bringing together different disciplines to explore new ways of making images and telling stories.</p>
+          <p>One of these experiments led to <strong>Algorithmic VFX</strong>, a visual effects method we developed by combining 3D animation with creative coding using p5.js.</p>
+          <p>Algorithmic VFX first took shape through our animated film project, <em>Son of Aladdin</em>, which became the starting point for our exploration of this technique and its possibilities.</p>
+          <h2>ALGORITMIC VFX</h2>
+          <img src="https://i.imgur.com/0gOy1fo.png" alt="Algorithmic VFX görseli">
+          <p>Algorithmic VFX is an experimental visual effects method developed by Project N.O.M. that combines 3D animation with creative coding. Using p5.js, an open-source JavaScript library developed by the Processing Foundation, we create visual effects such as fire, explosions, smoke, light and particle movements through code.</p>
+          <p>By treating code as a visual medium, we explore alternative ways of producing and animating effects, bringing together procedural visuals, 2D and 3D animation, and music. Rather than relying on pre-made effects, we build our own tools and experiments to develop a distinct visual language.</p>
+          <p>The method was developed as part of <em>Son of Aladdin</em>, Project N.O.M.'s first animated film project, where Algorithmic VFX plays an integral role in shaping its visual world.</p>
+        </div>
+      </div>
+    </header>
+
+  </div>
+</body>
+</html>

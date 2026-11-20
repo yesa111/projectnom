@@ -88,13 +88,34 @@
       font: 400 clamp(30px, 5vw, 52px)/1 "This Is Electronik", "Arial Black", Impact, sans-serif;
       letter-spacing: 0.02em;
       text-transform: uppercase;
+      text-align: center;
     }
 
     .brand-art p {
-      max-width: 600px;
-      margin: 16px 0 0;
+      max-width: 820px;
+      margin: 16px auto 0;
       color: var(--soft-ink);
-      font: 400 15px/1.75 "Manrope", Arial, sans-serif;
+    }
+
+    .teaser-link {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 12px 28px;
+      background: var(--blue);
+      border: 2px solid var(--ink);
+      border-radius: 8px;
+      box-shadow: 5px 5px 0 var(--ink);
+      color: var(--ink);
+      font-weight: 700;
+      text-decoration: none;
+      font: 700 24px/1 "Manrope", Arial, sans-serif;
+      letter-spacing: 0.08em;
+      transition: transform 120ms ease, box-shadow 120ms ease;
+    }
+
+    .teaser-link:hover {
+      transform: translate(3px, 3px);
+      box-shadow: 2px 2px 0 var(--ink);
     }
 
     nav {
@@ -209,10 +230,10 @@
   <div class="page">
     <header>
       <div>
-        <a class="name" href="#top">projectnom</a>
+        <a class="name" href="#top">project: n.o.m.</a>
         <div class="brand-art">
           <img src="https://i.imgur.com/UyZVfbU.png" alt="Project N.O.M. görseli">
-          <p>Project N.O.M. is an independent creative studio founded by two siblings, Yusuf and Şeyma Aydın. We started building the studio from scratch in our apartment garage, using our own resources, experimenting with animation, creative coding and digital art.</p>
+          <p>Project N.O.M. is an Istanbul-based independent creative studio founded by two siblings, Yusuf Samet Aydın and Şeyma Aydın. We started building the studio from scratch in our apartment garage, using our own resources, experimenting with animation, creative coding and digital art.</p>
           <p>Working independently, we develop our own tools, techniques and visual approaches, bringing together different disciplines to explore new ways of making images and telling stories.</p>
           <p>One of these experiments led to <strong>Algorithmic VFX</strong>, a visual effects method we developed by combining 3D animation with creative coding using p5.js.</p>
           <p>Algorithmic VFX first took shape through our animated film project, <em>Son of Aladdin</em>, which became the starting point for our exploration of this technique and its possibilities.</p>
@@ -221,6 +242,14 @@
           <p>Algorithmic VFX is an experimental visual effects method developed by Project N.O.M. that combines 3D animation with creative coding. Using p5.js, an open-source JavaScript library developed by the Processing Foundation, we create visual effects such as fire, explosions, smoke, light and particle movements through code.</p>
           <p>By treating code as a visual medium, we explore alternative ways of producing and animating effects, bringing together procedural visuals, 2D and 3D animation, and music. Rather than relying on pre-made effects, we build our own tools and experiments to develop a distinct visual language.</p>
           <p>The method was developed as part of <em>Son of Aladdin</em>, Project N.O.M.'s first animated film project, where Algorithmic VFX plays an integral role in shaping its visual world.</p>
+          <h2>SON OF ALADDIN</h2>
+          <p><em>Son of Aladdin</em> is Project N.O.M.'s first animated film project, a 3D science-fiction adventure inspired by the tales of <em>One Thousand and One Nights</em>, the ancient world of Mesopotamia and the stories passed down through generations of our family.</p>
+          <p>Following Aladdin's son on a journey from Istanbul to Babylon and beyond, the project brings together mythology, history, technology and imagination to build an original animated universe.</p>
+          <p>Combining 3D animation, creative coding and original visual effects, <em>Son of Aladdin</em> is also the project where we first developed and explored our Algorithmic VFX method.</p>
+          <p><a class="teaser-link" href="https://youtu.be/iehezcOfjug" target="_blank" rel="noopener noreferrer">TEASER</a></p>
+          <h2>Contact</h2>
+          <p><a href="mailto:yusufesaydin@gmail.com">yusufesaydin@gmail.com</a></p>
+          <p><a href="https://www.instagram.com/projectnom_/" target="_blank" rel="noopener noreferrer">Instagram</a></p>
         </div>
       </div>
     </header>
